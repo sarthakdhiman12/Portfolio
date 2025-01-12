@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional portfolio website">
+    <title>My Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #f0f0f0;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+        header {
+            background-color: #1c1c1c;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            font-size: 1.8rem;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #f0f0f0;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ff9800;
+        }
+        section {
+            padding: 60px 40px;
+        }
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background-color: #1c1c1c;
+        }
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+        .hero a {
+            text-decoration: none;
+            color: #121212;
+            background-color: #ff9800;
+            padding: 10px 20px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .hero a:hover {
+            background-color: #e68900;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: #ff9800;
+        }
+        .center-content {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .center-content img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        .pop {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #2c2c2c;
+            color: #b0b0b0;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            display: none;
+        }
+        .pop h2 {
+            color: #ff9800;
+            margin-bottom: 20px;
+        }
+        .pop .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .pop .skill {
+            background-color: #3a3a3a;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            color: #f0f0f0;
+        }
+        .skill h3 {
+            margin-bottom: 10px;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            display: none;
+        }
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .project {
+            background-color: #1c1c1c;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        .project h3 {
+            margin-bottom: 10px;
+        }
+        .project img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1c1c1c;
+            color: #f0f0f0;
+        }
+        footer a {
+            color: #ff9800;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="center-content">
+            <img src="your-image.jpg" alt="Your Image">
+            <h2>Your Name</h2>
+        </div>
+        <p>Showcasing my skills, projects, and passion for excellence.</p>
+        <a href="#projects">View Projects</a>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto;">
+            I am a dedicated professional with a passion for creating impactful solutions. With a strong background in [your field/skills], I strive to deliver exceptional results and continually improve my craft.
+        </p>
+    </section>
+
+    <div class="overlay"></div>
+    <div class="pop" id="skills-popup">
+        <h2>Skills</h2>
+        <div class="skills">
+            <div class="skill">
+                <h3>Skill 1</h3>
+            </div>
+            <div class="skill">
+                <h3>Skill 2</h3>
+            </div>
+            <div class="skill">
+                <h3>Skill 3</h3>
+            </div>
+        </div>
+    </div>
+
+    <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects">
+            <div class="project">
+                <img src="project1.jpg" alt="Project 1">
+                <h3>Project 1</h3>
+                <p>Description of this project and its key features.</p>
+            </div>
+            <div class="project">
+                <img src="project2.jpg" alt="Project 2">
+                <h3>Project 2</h3>
+                <p>Description of this project and its key features.</p>
+            </div>
+            <div class="project">
+                <img src="project3.jpg" alt="Project 3">
+                <h3>Project 3</h3>
+                <p>Description of this project and its key features.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Contact</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto;">
+            Feel free to reach out to me at <a href="mailto:your.email@example.com">your.email@example.com</a> or connect with me on <a href="www.linkedin.com/in/sarthak-dhiman-7a967b208">LinkedIn
